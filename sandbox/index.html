@@ -13,6 +13,17 @@
     <div id="setuped">
         setuped at {{theDate}}
     </div>
+    <div id="event-handling">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+    <div id="twoWayDataBinding">
+        <p v-for="text in messages">
+            {{ text }}
+        </p>
+        <input v-model="messages[0]" />
+        <button v-on:click="palindrome"> check if palindrome</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
