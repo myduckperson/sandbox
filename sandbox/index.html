@@ -10,13 +10,21 @@
 </head>
 <body>
     <h1> Hello setup </h1>
+    
+    <!-- set the date -->
     <div id="setuped">
         setuped at {{theDate}}
     </div>
+    
+    
+    <!-- handle some events -->
     <div id="event-handling">
         <p>{{ message }}</p>
         <button v-on:click="reverseMessage">Reverse Message</button>
     </div>
+    
+    
+    <!-- two way data binding with some logic -->
     <div id="twoWayDataBinding">
         <p v-for="text in messages">
             {{ text }}
@@ -24,6 +32,29 @@
         <input v-model="messages[0]" />
         <button v-on:click="palindrome"> check if palindrome</button>
     </div>
+
+
+    <!-- whatever this is (very confusing components) -->
+    <div id="debate">
+        <ol>
+            <apples
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+            ></apples>
+        </ol>
+    </div>
+
+    <!-- a try to understand components -->
+
+    <div id="attempt">
+        <ol>
+            <!-- Create an instance of the todo-item component -->
+            <aples-bruh></aples-bruh>
+        </ol>
+    </div>
+
+      
     <script src="main.js"></script>
 </body>
 </html>
